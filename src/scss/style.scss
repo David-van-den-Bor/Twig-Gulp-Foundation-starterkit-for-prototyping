@@ -1,0 +1,583 @@
+@import 'animaties';
+
+$primary-color:#F8A322;
+$secondary-color: #333333;
+$third-color: #B3B8BC;
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+img {
+  width:100%;
+  height:auto;
+}
+
+body {
+  font-family:'Gotham Thin',  Roboto,  sans-serif;
+  font-size:100%;
+  line-height:1.2;
+  overflow-x: hidden;
+  width:100%;
+}
+
+.nobr { white-space: nowrap; }
+
+@font-face {
+  font-family: 'Gotham Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gotham Book'), url('http://www.internet-groningen.nl/presale-fixed/dist/fonts/gotham-book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gotham Book'), url('http://www.internet-groningen.nl/presale-fixed/dist/fonts/gotham-thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gotham Book'), url('http://www.internet-groningen.nl/presale-fixed/dist/fonts/gotham-black.woff') format('woff');
+}
+
+
+h2 {
+  font-family:'Gotham Black', Roboto, sans-serif;
+  font-size:1.8rem;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+h3 {
+  font-family:'Gotham Book',  Roboto,  sans-serif;
+  font-size:1.5rem;
+  font-weight:100;
+  color: rgba($secondary-color,.8);
+}
+
+.gestreept {
+  position: relative;
+  display: block;
+  margin-bottom:2rem;
+}
+
+.gestreept:after {
+  content:' ';
+  position: absolute;
+  top:100%;
+  left:50%;
+  width: 60px;
+  margin-top:.5rem;
+  border-bottom:1px solid rgba($secondary-color,.8);
+  border-radius:4px;
+  transform:translateX(-50%);
+}
+
+.gestreept-links:after {
+  transform:translateX(0);
+  left:0;
+}
+
+p {
+  font-family:'Gotham Thin',  Roboto,  sans-serif;
+  font-weight:normal;
+  font-size:1rem;
+  margin-bottom:1.6rem;
+}
+
+.button {
+  font-size: 1.6rem;
+  width:18rem;
+  white-space:nowrap;
+  margin:0 auto;
+  color:white;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background: $primary-color;
+  font-family: 'PT Serif', Georgia, serif;
+  font-weight:700;
+
+  padding:1.2rem 0;
+  border-radius:.8rem;
+  &:hover, &:focus {
+    background-color: rgba($secondary-color,.37);
+    color: #fefefe;
+  }
+}
+
+.transparant {
+  background: transparent;
+  border:solid 2px white;
+  padding:1.1rem 5rem;
+  &:hover {
+    background-color:black;
+    border-color:transparent;
+  }
+}
+
+.divider {
+  margin: 0 auto;
+  width:75%;
+  margin-top:1rem;
+  margin-bottom:4rem;
+}
+
+.sectieheader {
+  margin:0 auto;
+  text-align: center;
+  margin-top:4rem;
+}
+
+a {text-decoration: none;}
+
+
+
+.wrapper {
+  display: block;
+  max-width:1440px;
+  margin:0 auto;
+}
+
+.fixed {
+  position: fixed;
+  top:0;
+  width:100%;
+  margin:0 auto;
+  background-color: white;
+  z-index:2;
+  box-shadow: 10px 10px 150px rgba(0, 0, 0, 0.49);
+}
+
+
+.menu {
+  z-index:1;
+  font-family:'Gotham Book',  Roboto,  sans-serif;
+  font-size: 1.5rem;
+  display: table;
+  width:100%;
+  li {
+    display: table-cell;
+    width:20%;
+    text-align: center;
+    list-style-type: none;
+    padding:1.5rem;
+    white-space: nowrap;
+  }
+  a {color:$secondary-color;
+    &:hover{
+      color: $primary-color}
+  }
+  @media screen and (max-width: 780px ) {
+    transition: all .8s ease-in-out 0s;
+    margin-top:-175px;
+    height:220px;
+    li {padding:0;
+      display: block;
+      width:100%;
+      line-height:1.8;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+}
+  };
+}
+
+.sluiten {
+transition: all .8s ease-in-out 0s;
+margin-top: 20px
+}
+
+.logo {
+  width:140px;
+  height:140px;
+  margin-top:-30px;
+  margin-bottom:-100px;
+  z-index:1;
+
+  @media screen and (max-width: 780px ) {
+    position: absolute;
+    transform: translateX(-50%);
+    margin-top:80px;
+  };
+}
+
+.hero {
+  display: table;
+  z-index:-1;
+  width:100%;
+  background: url(../img/achtergrondfoto.jpg) center;
+  background-size: cover;
+  height: 60rem;
+  @media screen and (max-width: 780px ) {
+    height: 69rem;
+  };
+  position: relative;
+  margin: 0 0 3rem;
+
+  .splash {
+    display: table-cell;
+    color:white;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:5rem;
+    width:100%;
+    margin:0 auto;
+    h1 {font-family: 'PT Serif', Georgia, serif;
+      text-transform: uppercase;
+      font-weight:700;
+      font-size: 4.5rem;
+      white-space: nowrap;
+    };
+    p {font-family: 'PT Serif', Georgia, serif;
+      font-size:1.8rem;
+      padding:1.2rem 0 2.8rem 0;
+      font-style: italic;
+    }
+    @media screen and (max-width: 468px ) {
+      h1 {font-size: 3.2rem;}
+    };
+    .button {margin:1rem 2rem 0 2rem}
+  }
+
+}
+
+.hero:before, .hero:after {
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  top:0;
+  width: 50%;
+  height: 100%;
+  border: 200px solid black;
+  border-bottom-color: white;
+  border-top-color:transparent
+}
+
+.hero:before {
+  left: 0;
+  border-right: 1200px solid transparent;
+  border-left: 0;
+}
+
+.hero:after {
+  right: 0;
+  border-left: 1200px solid transparent;
+  border-right: 0;
+}
+
+
+.waarom {
+
+
+
+  width:75%;
+  margin:0 auto;
+  display: table;
+  text-align: center;
+  div {display:table-cell;
+  }
+  img {
+    width:200px;
+    height:200px
+  }
+
+  p {
+    max-width:12rem;
+    margin:0 auto;
+    padding-bottom:3rem;}
+  @media screen and (max-width: 800px ) {
+    margin-top:-10rem;
+    div {display:block;
+      width:100%;}
+    img {
+      width:340px;
+      height:340px;
+
+    }
+    h3 {font-size: 3rem}
+  };
+}
+
+
+
+.grijs {
+  background: $third-color;
+  border:solid 2px white;
+  padding:1.1rem 5rem;
+  &:hover {
+    background-color:black;
+    border-color:transparent;
+  }
+}
+
+
+
+
+.samenvatting {
+  display: table;
+  h2 { margin-top:7rem;}
+  div { display: table-cell;
+    width:60%;}
+  div:first-of-type {padding-left:10%;
+    display: table-cell;vertical-align: top;
+    width:43%;}
+  @media screen and (max-width: 1000px ) {
+    div {
+      display: block;
+      width:100%;}
+    div:first-of-type {padding:10%; width: 100%;display:block;
+    }
+  };
+}
+
+
+.uitleg {
+  display: table;
+  text-align: center;
+  width:100%;
+  padding-right:39%;
+  margin-top:3rem;
+  background: url(../img/iphone.png) center;
+  background-size: cover;
+
+  .gestreept-links:after {
+    border-bottom: 1px solid rgba($third-color,.8);}
+
+  .features {
+    display: table;
+    padding-top:2rem;
+    width: 65%;
+    background-color: #000;
+    margin: 0 auto;
+    color:white;
+  }
+  .feature {
+    display: table;
+    margin-bottom:2rem;
+  .text {
+    display: table-cell;
+    text-align: left;
+    padding-right:2rem;
+    }
+  .icon {
+    display: table-cell;
+text-align: left;
+    vertical-align: top;
+    img{
+      width:120px;
+      height:120px;
+      margin-right:-60px;
+    }
+    @media screen and (max-width: 450px ) {
+      img {display:none}
+    }
+  }
+  }
+  }
+
+@media screen and (max-width: 1000px ) {
+  .uitleg {
+    padding-right: 10%;
+    background:#000;
+    .features {
+      width:80%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px ) {
+  .uitleg {
+    padding-right: 0;
+  }
+}
+
+.text {
+  display:table;
+  vertical-align: middle;
+  width:100%;
+}
+
+  .features {
+    display:table;
+    margin:0 auto;
+  }
+
+  .marketing  {
+    z-index:1;
+    width:100%;
+    display:table;
+    padding-bottom:2rem;
+    p {
+      padding-bottom:2rem;}
+    img {
+      width:150px;height:150px
+    }
+    @media screen and (max-width: 700px ) {
+      p { display: block;
+        width:100%;}
+      img {
+        display: none;}
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+.prijzen {
+  width:75%;
+  margin:0 auto;
+  display: table;
+
+
+  .paneel {
+    display:table-cell;
+    width:50%;
+    border:solid 5rem white;
+    border-top:none;
+    text-align: center;
+    p {padding:2.5rem;}
+    background: #F7F8F8;
+
+    @media screen and (max-width: 1080px ) {
+      display: table;
+      width:70%;
+      border:none;
+      margin:0 auto;
+      margin-bottom:8rem;
+    }
+    .header {
+      display: table;
+      width:100%;
+      text-transform: capitalize;
+      height:12rem;
+      vertical-align: center;
+      background: $primary-color;
+      h2{
+        display:table-cell;
+        padding-top:2rem;
+text-transform: capitalize;
+        color: white;font-family:'Gotham Black', Roboto, sans-serif;
+        font-size:1.5rem;
+      }
+
+    }
+    .premium {background-color: $third-color}
+    @media screen and (max-width: 700px ) {
+      max-width:100%;
+      margin-bottom:8rem;
+    }
+  }
+  .prijs {
+    display: table;
+    border-radius:50%;
+    background-color: rgba(255,255,255,1);
+    border: 12px solid hsla(0, 0%, 100%, 0.5);
+    background-clip: padding-box;
+    width:12rem;
+    height:12rem;
+    margin:0 auto;
+    margin-top:-7rem;
+    font-size:1.5rem;
+    font-family:'Gotham Black',  Roboto, sans-serif;
+    span {display:table-cell;vertical-align:middle;font-weight: 800;
+    }
+
+  }
+}
+
+
+.formulier {
+  max-width:30rem;
+  display: table;
+  margin:0 auto;
+  margin-bottom:20rem;
+  margin-top:-3rem;
+  text-align: center;
+  h3 {
+    &:before{
+      border-bottom:none;
+    }
+  }
+form {
+  display: table-cell;
+}
+  input {font-family:'Gotham Thin', Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    padding: 1rem;
+    font-size:1.4rem;
+    margin:.5rem;
+    width: 90%;
+    border:solid 1px $secondary-color;
+    border-radius:.6rem;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $secondary-color;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $secondary-color;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $secondary-color;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $secondary-color;
+  }
+  @media screen and (max-width: 1080px ) {h3 {width:80%;
+    margin:0 auto;}}
+}
+
+
+
+.footer {
+  font-family: 'Gotham Book',  Roboto,  sans-serif;
+  background-color: $secondary-color;
+  a {  color: white  }
+  .contactgegevens {
+    display:table;
+    width:100%}
+  .social {
+    display: table-cell;
+    padding:1rem;
+    width:50%;
+    img {
+      width: 35px;
+      height: 35px;
+      margin: 0 1rem 0 0;
+    }
+  }
+;
+  .copyright {
+    display: table-cell;
+    padding:1rem;
+    width:50%;
+    vertical-align: middle;
+    a {
+
+      float: right;
+    }
+  }
+}
+
+.close {
+
+}
+
+
+

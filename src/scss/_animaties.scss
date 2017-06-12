@@ -1,0 +1,170 @@
+
+/*=== Trigger  ===*/
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/*=== Optional Delays, change values here  ===*/
+.one {
+  animation-delay: 0.4s;
+}
+.two {
+  animation-delay: 1.7s;
+}
+.three {
+  animation-delay: 2.3s;
+}
+.four {
+  animation-delay: 3.3s;
+}
+
+/*=== Animations start here  ===*/
+/*=== FADE IN  ===*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+/*=== FADE IN DOWN ===*/
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+/*==== FADE IN UP ===*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/*==== FADE IN UP BIG ===*/
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUpBig {
+  animation-name: fadeInUpBig;
+}
+
+/*=== FADE IN LEFT ===*/
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+
+/*==== FADE IN RIGHT ===*/
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+
+/** ---------------------------------------------------------------------- //
+*  @group toegepaste animaties in website
+*  @author @david
+*/
+
+
+
+.waarom.inview {
+  animation-delay: .5s;
+  @extend .animate;
+  @extend .fadeInLeft;
+}
+
+
+.prijs.inview { @extend .animate;
+  @extend .fadeIn;
+  animation-delay: .5s;
+  animation-duration: 2s;
+}
+
+.splash.inview {
+  animation-delay: .5s;
+  @extend .animate;
+  @extend .fadeInUp;
+}
+
+.formulier .button.inview {
+  animation-delay: .5s;
+  @extend .animate;
+  @extend .fadeInUp;
+}
+/* @end toegepaste animaties in website  *///////////////
+
+
+
+
+
+
+
+

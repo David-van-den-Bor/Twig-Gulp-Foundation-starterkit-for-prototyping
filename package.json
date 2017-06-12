@@ -1,0 +1,50 @@
+{
+  "name": "Twig-Gulp-Bower-Foundation-Starterkit",
+  "version": "1.0.0",
+  "description": "Twig Gulp Starterkit for prototyping or mocking up sites, with Bower management and Foundation baked in. Think Zurb-Foundation-starterkit, but with TWIG instead of Handlebars templating",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/david-van-den-bor/Twig-Gulp-LibSass-Foundation-Starterkit"
+  },
+  "author": "David van den Bor",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/David-van-den-Bor/Twig-Gulp-Bower-Foundation-Starterkit/issues"
+  },
+  "homepage": "https://github.com/David-van-den-Bor",
+  "dependencies": {
+    "gulp": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.5.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.5.0",
+    "babel-plugin-transform-es2015-classes": "^6.5.2",
+    "babel-plugin-transform-es2015-destructuring": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.5.2",
+    "babel-plugin-transform-es2015-parameters": "^6.5.0",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
+    "babel-plugin-transform-es2015-spread": "^6.5.2",
+    "babel-plugin-transform-es2015-template-literals": "^6.5.2",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "^6.1.2",
+    "gulp-bower": "latest",
+    "gulp-changed": "latest",
+    "gulp-include": "latest",
+    "gulp-main-bower-files": "latest",
+    "gulp-notify": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-uncss": "latest",
+    "gulp-util": "latest",
+    "imagemin-jpegoptim": "latest",
+    "imagemin-pngquant": "latest",
+    "vinyl-ftp": "latest"
+  }
+}

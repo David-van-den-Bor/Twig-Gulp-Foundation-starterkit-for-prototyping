@@ -1,0 +1,21 @@
+{
+  "name": "Twig Gulp Bower LibSass Foundation Starterkit",
+  "description": "Twig Gulp Starterkit with Bower, LibSass Foundation and Gulp Pretty Urls baked in.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "latest",
+    "motion-ui": "latest",
+    "fontawesome": "latest",
+    "animate.css": "latest",
+    "scrollreveal":"latest"
+  },
+  "private": true
+}

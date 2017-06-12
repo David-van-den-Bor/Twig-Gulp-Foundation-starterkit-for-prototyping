@@ -1,0 +1,24 @@
+{# onderstaande root hoeft niet specifiek gedefinieert te worden,
+je kan hem ook opgeven in "php/config.php" #}
+{% set root  = "http://localhost:3000/presale/" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+	<title>{% block PageTitle %}Presale{% endblock %} | Testcase site</title>
+	<meta name="description" content="{% block PageDescription %}Ontwerp van de testcase site{% endblock %}">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic" rel="stylesheet">
+	<link rel="stylesheet" href="{{ root }}dist/css/style.css">
+	</head>
+<body id="home">
+
+{% block PageContent %}
+{% endblock %}
+
+<script src="{{ root }}dist/js/jquery.min.js"></script>
+<script src="{{ root }}dist/js/scripts.js"></script>
+
+</body>
+</html>
