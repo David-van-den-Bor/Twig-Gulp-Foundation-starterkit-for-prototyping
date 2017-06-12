@@ -1,4 +1,4 @@
-# twig-prototyping starterkit
+# TWIG prototyping starterkit
 
 A simple boilerplate/starterkit for prototyping with TWIG and Foundation. Composer (PHP package manager) is used to fetch TWIG, that's all :-)
 
