@@ -1,10 +1,13 @@
 # twig-prototyping
 
-A simple platform for HTML Wireframe design, rapid prototype construction, or browsing views while you're slicing a web design.
+A simple boilerplate/starterkit for prototyping with TWIG and Foundation.
 
 ## Overview
 
-This project browses your Twig patterns, routes url tokens to your 'page' .twig files, feeds your JSON data to the views, and supports in-line annotation. It leverages Twig (http://twig.sensiolabs.org/) to render the templates, Foundation 6 (http://getbootstrap.com/) to give things a stylish and responsive feel.
+This project leverages Twig (http://twig.sensiolabs.org/) to render the templates, and Foundation 6 (http://foundation.zurb.com/sites.html/) to give things a stylish and responsive feel.
+
+## Bower and Gulp baked in
+There's a simple gulp file included which takes care of running preprocessing tasks while working on a design. Browsersync and SASS compiling included. JS files are minified and concatinaded, and images compressed.
 
 ## Basic Usage
 
